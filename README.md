@@ -105,3 +105,14 @@ das passt zur konfigurierten CPU-Frequenz von 1 MHz.
 Das Blinkprogramm wurde erfolgreich ueber PlatformIO hochgeladen;
 AVRDUDE hat alle 102 Byte Flash zurueckgelesen und verifiziert.
 Die sichtbare LED-Funktion muss am Board kontrolliert werden (JP6 gesteckt).
+
+## Port Expander
+
+Über den Portexpander kann direkt auf die Atmel Prozessor Ports PA0-7, PB0-7, PC0-7, PD0-7 zugegriffen werden.
+
+Die dürfen dann nicht durch die JP1-12 blockiert werden, das J1-12 die auf die on-board Komponenten lenkt.
+
+Im Beispiel wird JP6 gezogen, damit der PD5 freigegeben.
+An diesem PD5 hängt jetzt extern ein Vorwiderstand 470 Ohm und eine LED, die munter blinkt.
+
+![ATTINY2313_mit_externer_LED](images/ATTINY2313_mit_externer_LED.png)
