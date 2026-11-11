@@ -116,3 +116,19 @@ Im Beispiel wird JP6 gezogen, damit der PD5 freigegeben.
 An diesem PD5 hängt jetzt extern ein Vorwiderstand 470 Ohm und eine LED, die munter blinkt.
 
 ![ATTINY2313_mit_externer_LED](images/ATTINY2313_mit_externer_LED.png)
+
+## Eigenständiger Aufbau auf dem Steckbrett
+
+Der Test auf dem Evaluationboard war erfolgreich. Für den Betrieb mit geregelten
+5 V auf einem halben Steckbrett ist mit den ausgelesenen Fuses kein Quarz nötig.
+Die Firmware kann unverändert bleiben.
+
+[Bauteilliste, Aufbauanleitung und optionale ISP-Belegung](hardware/README.md)
+
+- [Schaltplan (SVG)](hardware/schaltplan.svg)
+- [Verdrahtungsplan für ein halbes Steckbrett (SVG)](hardware/steckbrett.svg)
+- [KiCad-Schaltplan (Legacy-Format)](hardware/blink.sch)
+
+Auch der Aufbau auf einem Steckbrett klappt und es blinkt (siehe [hardware/README](hardware/README.md))
+
+![bare_ATTINY2313_Blink](images/bare_ATTINY2313_Blink.png)

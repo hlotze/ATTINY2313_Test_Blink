@@ -1,0 +1,140 @@
+EESchema Schematic File Version 4
+LIBS:blink-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "ATtiny2313 - Breadboard LED"
+Date "2026-11-11"
+Rev "1.0"
+Comp "5 V / internal RC 1 MHz"
+Comment1 "PDIP-20; no crystal required"
+$EndDescr
+$Comp
+L ATtiny2313_DIP20 U1
+U 1 1 000003F5
+P 5200 3600
+F 0 "U1" H 5350 3700 50 0000 L CNN
+F 1 "ATtiny2313 DIP20" H 5350 3500 50 0000 L CNN
+	1 5200 3600
+	1 0 0 -1
+$EndComp
+Wire Wire Line
+	4600 3200 4100 3200
+Text Label 4100 3200 0 40 ~ 0
+RESET
+NoConn ~ 4600 3300
+NoConn ~ 4600 3400
+NoConn ~ 4600 3500
+NoConn ~ 4600 3600
+NoConn ~ 4600 3700
+NoConn ~ 4600 3800
+NoConn ~ 4600 3900
+Wire Wire Line
+	4600 4000 4100 4000
+Text Label 4100 4000 0 40 ~ 0
+LED_OUT
+Wire Wire Line
+	4600 4100 4100 4100
+Text Label 4100 4100 0 40 ~ 0
+GND
+NoConn ~ 5800 4100
+NoConn ~ 5800 4000
+NoConn ~ 5800 3900
+NoConn ~ 5800 3800
+NoConn ~ 5800 3700
+NoConn ~ 5800 3600
+Wire Wire Line
+	5800 3500 6100 3500
+Text Label 6100 3500 0 40 ~ 0
+MOSI
+Wire Wire Line
+	5800 3400 6100 3400
+Text Label 6100 3400 0 40 ~ 0
+MISO
+Wire Wire Line
+	5800 3300 6100 3300
+Text Label 6100 3300 0 40 ~ 0
+SCK
+Wire Wire Line
+	5800 3200 6100 3200
+Text Label 6100 3200 0 40 ~ 0
++5V
+$Comp
+L R R1
+U 1 1 00000427
+P 2800 3300
+F 0 "R1" H 2950 3400 50 0000 L CNN
+F 1 "10k" H 2950 3200 50 0000 L CNN
+	1 2800 3300
+	1 0 0 -1
+$EndComp
+Wire Wire Line
+	2800 3100 3100 3100
+Text Label 3100 3100 0 40 ~ 0
++5V
+Wire Wire Line
+	2800 3500 3100 3500
+Text Label 3100 3500 0 40 ~ 0
+RESET
+$Comp
+L C C1
+U 1 1 00000438
+P 7500 3400
+F 0 "C1" H 7650 3500 50 0000 L CNN
+F 1 "100nF" H 7650 3300 50 0000 L CNN
+	1 7500 3400
+	1 0 0 -1
+$EndComp
+Wire Wire Line
+	7500 3200 7800 3200
+Text Label 7800 3200 0 40 ~ 0
++5V
+Wire Wire Line
+	7500 3600 7800 3600
+Text Label 7800 3600 0 40 ~ 0
+GND
+$Comp
+L R R2
+U 1 1 00000449
+P 2800 4700
+F 0 "R2" H 2950 4800 50 0000 L CNN
+F 1 "470" H 2950 4600 50 0000 L CNN
+	1 2800 4700
+	1 0 0 -1
+$EndComp
+Wire Wire Line
+	2800 4500 3100 4500
+Text Label 3100 4500 0 40 ~ 0
+LED_OUT
+Wire Wire Line
+	2800 4900 3100 4900
+Text Label 3100 4900 0 40 ~ 0
+LED_A
+$Comp
+L LED D1
+U 1 1 0000045A
+P 5000 4800
+F 0 "D1" H 5150 4900 50 0000 L CNN
+F 1 "RED" H 5150 4700 50 0000 L CNN
+	1 5000 4800
+	1 0 0 -1
+$EndComp
+Wire Wire Line
+	4800 4800 4400 4800
+Text Label 4400 4800 0 40 ~ 0
+LED_A
+Wire Wire Line
+	5200 4800 5500 4800
+Text Label 5500 4800 0 40 ~ 0
+GND
+Text Notes 2500 5600 0 60 ~ 0
+C1: place directly at supply pins 20 and 10.
+Text Notes 2500 5800 0 60 ~ 0
+Optional ISP: MISO=18, +5V=20, SCK=19, MOSI=17, RESET=1, GND=10.
+Text Notes 2500 6000 0 60 ~ 0
+Use only one supply source. XTAL1/XTAL2 remain unconnected.
+Text Notes 2500 6200 0 60 ~ 0
+See steckbrett.svg and README.md for exact breadboard holes.
+$EndSCHEMATC
